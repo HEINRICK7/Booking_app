@@ -1,0 +1,66 @@
+@import '../../global.css';
+
+.main_nav li {
+    display: inline;
+    margin-left: 20px;
+    
+    color: #B8BECD;
+    cursor: pointer;
+
+}
+.main_nav li:hover {
+   color: #5c258d; 
+}
+.main_nav {
+    position: absolute;
+    width: 750px;
+    height: 60px;
+    left: 547px;
+    top: 35px;
+    
+}
+.button_nav_register {
+    position: absolute;
+    width: 132px;
+    height: 45px;
+    
+    left: 79.88%;
+    right: 11.88%;
+    top: 0.77%;
+    bottom: 98.44%;
+
+    border: 0;
+    background: -webkit-linear-gradient(to right, #5c258d, #a24394); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5c258d, #a24394); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: var(--white-color);
+
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button_nav_login {
+    width: 132px;
+    height: 45px;
+    
+    position: absolute;
+    left: 55%;
+    right: 11.88%;
+    top: 0.77%;
+    bottom: 98.44%;
+
+    border: solid 2px #5c258d;
+    background: var(--white-color);
+    color: #5c258d;
+
+    border-radius: 8px;
+    cursor: pointer;
+}
+.logo {
+
+    position: absolute;
+    width: 50px;
+    height: 41px;
+    left: 100px;
+    top: 35px;
+    cursor: pointer;
+
+}
