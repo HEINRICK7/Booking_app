@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+.main_image {
+
+    position: absolute;
+    width: 550px;
+    height: 624px;
+    left: 708px;
+    top: 90px;
+}
+.text_main {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 80px;
+
+    color:
+    #7125b4;
+
+    mix-blend-mode: normal
+}
+h5 {
+width: 600px;
+position: absolute;
+left: 10%;
+right: 56.88%;
+top: 40%;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 36px;
+/* or 150% */
+
+
+color: #380565;
+
+}
+.button_home {
+width: 200px;
+height: 60px;
+position: absolute;
+left: 10%;
+top: 65%;
+
+background: -webkit-linear-gradient(to right, #5c258d, #a24394); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5c258d, #a24394); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: #ffff;
+border: 0 ;
+border-radius: 8px;
+cursor: pointer;
+
+filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
