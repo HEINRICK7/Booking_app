@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
-//import { Link } from 'react-router-dom'
+
 import { message } from 'antd'
 
-import axios from 'axios'
+import api from '../../../services/api'
 
 import { motion } from 'framer-motion'
 import { FiX } from 'react-icons/fi'
@@ -10,44 +10,44 @@ import { FiX } from 'react-icons/fi'
 import './styles.css'
 
 
+
 const ModalRegister = ({setModalOpen}) => {
-    
     const [ name, setName ] = useState('')
-    const [ email, setEmail] = useState('')
     const [ user, setUser ] = useState('')
+    const [ email, setEmail] = useState('')
+    const [ password, setPassword ] = useState('')
     const [ status ] = useState('ACTIVE')
     const [ type ] = useState('CLIENT')
+
+   
 
     const handleRegister = async (e) => {
         e.preventDefault()
 
-        const data = { name, email, user, status, type }
+        const data = { name, user, email, password, status, type }
         const key = 'updatable';
 
-            if(name !== '' && email !== '' && user !== '' && status !== '' && type !== ''){
+            if(!name ||!user || !email || !password || !status || !type){
+
+                message.info({ content: 'Preencha todos os campos.', key, duration: 3.5 });
+            }else {
+                
                 try {
-                    const response = await axios.post('http://localhost:8080/booking/v1/user', data)
-                    console.log(response.data)
-                    console.log(response.statusText)
-                    if(response.status === 201){
 
-                        message.info({ content: 'Usuário cadastrado com esse email no banco de dados, tente com outro email.', key, duration: 2 })
-                    }
-                    else{
-                        message.loading({ content: 'Loading...', key });
-                        setTimeout(() => {
-                            message.success({ content: 'Usuário cadastrado com sucesso.', key, duration: 3 });
-                        }, 1000);
+                    await api.post('/booking/v1/user', data)
+                   
+                    message.loading({ content: 'Loading...', key });
+                    setTimeout(() => {
+                        message.success({ content: 'Usuário cadastrado com sucesso.', key, duration: 3 });
+                    }, 1000);
 
-                     }   
+                    setModalOpen(false)
 
                 }catch{
-                    message.warning({ content:'Erro, por favor tente novamente...', duration: 3 });
-                }
 
-            }else {
-                message.info({ content: 'Preencha todos os campos.', key, duration: 3.5 });
-            }   
+                    message.warning({ content:'Erro, por favor tente novamente1...', duration: 3 });
+                }
+            }    
         
     }
 
@@ -66,11 +66,18 @@ const ModalRegister = ({setModalOpen}) => {
             <h4>Informe seus Dados</h4>
             
             <input 
-            className="signup_nome_register" 
+            className="signup_name_register" 
             type="text" 
             placeholder="seu nome"
             value={name}
             onChange={ e => setName(e.target.value)} 
+            />
+            <input 
+            className="signup_user_register" 
+            type="text" 
+            placeholder="seu user"
+            value={user}
+            onChange={ e => setUser(e.target.value)} 
             />
             <input 
             className="signup_email_register" 
@@ -84,8 +91,8 @@ const ModalRegister = ({setModalOpen}) => {
             className="signup_password_register"
             type="password" 
             placeholder="sua senha" 
-            value={user}
-            onChange={ e => setUser(e.target.value)} 
+            value={password}
+            onChange={ e => setPassword(e.target.value)} 
             
             />
     
