@@ -1,8 +1,4 @@
-import React,{useState} from 'react';
-//import { Link } from 'react-router-dom'
-import { message } from 'antd'
-
-import axios from 'axios'
+import React from 'react';
 
 import { motion } from 'framer-motion'
 import { FiX } from 'react-icons/fi'
