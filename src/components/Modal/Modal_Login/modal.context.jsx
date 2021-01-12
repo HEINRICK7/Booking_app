@@ -55,7 +55,7 @@ const ModalSignUp = ({setModalOpen}) => {
                 
                
             } catch (err) {
-                    message.warning({ content:"Error Tente Novamente"
+                message.warning({ content:"Error, Este email não esta cadastrado no nosso banco de dados"
                 , duration: 3 });
             }
         }

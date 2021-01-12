@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { motion } from 'framer-motion'
 import { FiX } from 'react-icons/fi'
@@ -26,8 +27,11 @@ const ModalPlaces = ({setModalOpen}) => {
     <h1 className="modal_places">Tipos de Reservas</h1>
     <div className="list_places">
        
-        <div><img className="list_image" src={Bar} alt="bar"/>
-            <p className="list_1">Bares</p>
+        <div> 
+            <Link to="/bares">
+                <img className="list_image" src={Bar} alt="bar"/>
+                    <p className="list_1">Bares</p>
+            </Link>
         </div> 
         <div><img className="list_image" src={Hoteis} alt="hoteis"/>
             <p className="list_3">Hoteis</p>

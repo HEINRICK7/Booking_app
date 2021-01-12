@@ -45,7 +45,7 @@ const ModalRegister = ({setModalOpen}) => {
 
                 }catch{
 
-                    message.warning({ content:'Erro, por favor tente novamente1...', duration: 3 });
+                    message.warning({ content:'Erro, por favor tente novamente...', duration: 3 });
                 }
             }    
         
