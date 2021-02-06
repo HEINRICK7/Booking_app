@@ -1,0 +1,77 @@
+
+.logo {
+
+    position: absolute;
+    width: 50px;
+    height: 41px;
+    left: 1%;
+    top: 4%;
+    cursor: pointer;
+
+}
+.text_logo {
+    position: absolute;
+    left: 4%;
+    top: 5.5%;
+
+    font-weight: 900;
+    font-family: 'Playfair Display';
+    color:#5c258d;
+}
+.pesquiza {
+    width: 900px;
+    margin: 35px 600px;
+}
+.pesquiza input {
+    height: 50px;
+    padding-left: 40px;
+    
+}
+input::placeholder {
+    position: relative;
+    left: 20px;
+    color: #5c258d;
+    
+}
+.busca {
+    margin-left: 20px;
+    height: 49px;
+    width: 100px;
+
+    border: 0;
+    background: -webkit-linear-gradient(to right, #5c258d, #a24394); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5c258d, #a24394); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.icon_bares {
+    color:#5c258d;
+    width: 30px;
+    position: relative;
+    left: -280px;
+    top: 1px;
+    
+}
+
+.icon_location {
+    color:#5c258d;
+    width: 30px;
+    position: relative;
+    left: -280px;
+    top: 1px;
+    
+}
+
+.dataPicker {
+    position: relative;
+    left: 600px;
+    padding: 20px;
+    
+}
+
+.data_hora {
+    height: 90px;
+    background: -webkit-linear-gradient(to right, #5c258d, #a24394); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5c258d, #a24394); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

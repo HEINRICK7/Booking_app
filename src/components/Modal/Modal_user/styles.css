@@ -1,0 +1,49 @@
+@import '../../../global.css';
+
+.Wrapper_user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  
+}
+.container_modal_user {
+    position: fixed;
+    background: var(--white-color);
+    width: 200px;
+    height: 300px;
+    left: 1650px;
+    top: 75px;
+
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    border-radius: 7px;
+
+}
+.button_close_user {
+    
+    float: right;
+    padding: 5px;
+    margin-right: 0px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.signup_user {
+    padding: 10px;
+    font-size: small;
+    font-weight: 900;
+    color: #7125b4;
+}
+
+.logOut {
+    margin-top: 85px;
+    padding: 20px;
+    color: #7125b4;
+    cursor: pointer;
+}

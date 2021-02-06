@@ -62,7 +62,6 @@
 
 }
 .signup_name_register {
-
     position: absolute;
     width: 275px;
     height: 42px;
@@ -70,7 +69,13 @@
     top: 130px;
     
 }
-.signup_user_register {
+.icon_name {
+    position: absolute;
+    left: 50px;
+    top: 145px;
+    color:rgba(172, 168, 165, 0.93)
+}
+.signup_email_register {
 
     position: absolute;
     width: 275px;
@@ -79,8 +84,16 @@
     top: 190px;
     
 }
-.signup_email_register {
 
+.icon_email {
+    position: absolute;
+    left: 50px;
+    top: 205px;
+    color:rgba(172, 168, 165, 0.93)
+}
+
+.signup_password_register {
+    
     position: absolute;
     width: 275px;
     height: 42px;
@@ -88,18 +101,17 @@
     top: 250px;
     
 }
-.signup_password_register {
-    
+
+.icon_password {
     position: absolute;
-    width: 275px;
-    height: 42px;
-    left: 42px;
-    top: 310px;
-    
+    left: 50px;
+    top: 263px;
+    color:rgba(172, 168, 165, 0.93)
 }
+
 .container_modal_signup_register input {
    
-    padding: 20px;
+    padding-left: 30px;
     background: rgba(255, 253, 251, 0.93);
     border: 1px solid var(--secundary-color);
     box-sizing: border-box;
@@ -119,7 +131,7 @@
     width: 150px;
     height: 40px;
     left: 110px;
-    top: 380px;
+    top: 350px;
 
     background: -webkit-linear-gradient(to right, #5c258d, #a24394); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #5c258d, #a24394); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

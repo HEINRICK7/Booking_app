@@ -17,12 +17,12 @@ const Nav = () => {
 
     return (
         <>  
-        <img className="logo" src={Logo} alt="calendar"/>
+      
+       
         <div className= "main_nav" >
             <ul>
-                <li>Home</li>
-                <li>Destinos</li>
-                <li>sobre</li>
+                <li><img className="logo_nav" src={Logo} alt="calendar"/></li>
+                <li> <p className="text_logo_nav">Explore Reservas</p></li>
                 <li><button className="button_nav_login" onClick={() => setModalOpenSignUp(true)}>Login</button></li>
                 <li><button className="button_nav_register" onClick={() => setModalOpenRegister(true)}>Registro</button></li>
             </ul>

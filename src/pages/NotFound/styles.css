@@ -1,0 +1,49 @@
+@import '../../global.css';
+
+.notFoundImg {
+
+    position: absolute;
+    width: 750px;
+    height: 624px;
+    left: 570px;
+    top: 70px;
+}
+
+.button_back {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+
+    background: -webkit-linear-gradient(to right, #5c258d, #a24394); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5c258d, #a24394); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffff;
+    border: 0 ;
+    font-weight: 900;
+    border-radius: 8px;
+    cursor: pointer;
+
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+.button_back_icon {
+    position: absolute;
+    left: 65px;
+    top: 65px;
+
+    color: #ffff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+h1 {
+
+    position: absolute;
+    width: 750px;
+    height: 624px;
+    left: 570px;
+    top: 650px;
+
+    font-size: 150px;
+    color: #6d66fe;
+}

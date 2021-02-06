@@ -9,6 +9,7 @@
     "antd": "^4.9.1",
     "axios": "^0.21.0",
     "framer-motion": "^2.9.5",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",

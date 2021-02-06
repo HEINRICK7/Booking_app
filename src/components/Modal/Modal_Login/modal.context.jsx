@@ -11,7 +11,7 @@ import axios from  "axios"
 
 
 import './styles.css'
-import { login, TOKEN_KEY } from '../../../services/auth';
+import { login } from '../../../services/auth';
 
 
 const ModalSignUp = ({setModalOpen}) => {
@@ -34,13 +34,18 @@ const ModalSignUp = ({setModalOpen}) => {
         else {
             try {
 
-                const response = await axios.post('http://localhost:8080/booking/v1/loginByEmail', data )
-                const { id, jwt} = response.data
-                console.log(response.data)
-                localStorage.setItem('userId', id);
-                localStorage.setItem('token', jwt);
+                const response = await axios.post('http://localhost:8080/login', data )
+                const { token} = response.data
+                const { id, name, email} = response.data.user
 
-                    if(TOKEN_KEY !== ''){
+                console.log(response.data)
+
+                localStorage.setItem('userId', id);
+                localStorage.setItem('userName', name);
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('token', token);
+
+                    if(login){
                          message.loading({ content: 'Loading...', key });
                         setTimeout(() => {
                             message.success({ content: ' sucesso.', key, duration: 3 });

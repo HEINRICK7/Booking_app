@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Home from './pages/Home/index'
 import SessionUser from './pages/SessionUser/index'
 import Bares from './pages/Bares/Index'
+import NotFound from './pages/NotFound/index'
 
 import { isAuthenticated } from "./services/auth"
 
@@ -29,7 +30,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
             <Route path="/" exact component={Home} />
             <Route path="/bares" exact component={Bares} />
             <PrivateRoute path="/session_user" exact component={SessionUser} />
-            <Route path="*" exact component={() => <h1>Page not found</h1>} />
+            <Route path="*" exact component={NotFound} />
         </Switch> 
       
      </BrowserRouter>

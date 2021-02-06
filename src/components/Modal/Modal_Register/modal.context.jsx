@@ -5,7 +5,12 @@ import { message } from 'antd'
 import api from '../../../services/api'
 
 import { motion } from 'framer-motion'
+
 import { FiX } from 'react-icons/fi'
+import { CgUserlane } from 'react-icons/cg'
+import { HiOutlineMail } from 'react-icons/hi'
+import { RiLockPasswordLine } from 'react-icons/ri'
+
 
 import './styles.css'
 
@@ -13,7 +18,6 @@ import './styles.css'
 
 const ModalRegister = ({setModalOpen}) => {
     const [ name, setName ] = useState('')
-    const [ user, setUser ] = useState('')
     const [ email, setEmail] = useState('')
     const [ password, setPassword ] = useState('')
     const [ status ] = useState('ACTIVE')
@@ -24,17 +28,17 @@ const ModalRegister = ({setModalOpen}) => {
     const handleRegister = async (e) => {
         e.preventDefault()
 
-        const data = { name, user, email, password, status, type }
+        const data = { name, email, password, status, type }
         const key = 'updatable';
 
-            if(!name ||!user || !email || !password || !status || !type){
+            if(!name || !email || !password || !status || !type){
 
                 message.info({ content: 'Preencha todos os campos.', key, duration: 3.5 });
             }else {
                 
                 try {
 
-                    await api.post('/booking/v1/user', data)
+                    await api.post('/users', data)
                    
                     message.loading({ content: 'Loading...', key });
                     setTimeout(() => {
@@ -72,29 +76,25 @@ const ModalRegister = ({setModalOpen}) => {
             value={name}
             onChange={ e => setName(e.target.value)} 
             />
-            <input 
-            className="signup_user_register" 
-            type="text" 
-            placeholder="seu user"
-            value={user}
-            onChange={ e => setUser(e.target.value)} 
-            />
+            <CgUserlane className="icon_name"/>
+            
             <input 
             className="signup_email_register" 
             type="text" 
             placeholder="seu email"
             value={email}
             onChange={ e => setEmail(e.target.value)} 
-            
             />
+             <HiOutlineMail className="icon_email"/>
+
             <input 
             className="signup_password_register"
             type="password" 
             placeholder="sua senha" 
             value={password}
             onChange={ e => setPassword(e.target.value)} 
-            
             />
+            <RiLockPasswordLine className="icon_password"/>
     
             <button className="signup_button_entrar_register" type="submit">Cadastrar</button>
 

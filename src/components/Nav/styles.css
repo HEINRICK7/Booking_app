@@ -1,16 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 @import '../../global.css';
 
 .main_nav li {
     display: inline;
     margin-left: 20px;
     
-    color: #B8BECD;
+    color: #5c258d;
     cursor: pointer;
 
 }
-.main_nav li:hover {
-   color: #5c258d; 
-}
+
 .main_nav {
     position: absolute;
     width: 750px;
@@ -54,13 +54,20 @@
     border-radius: 8px;
     cursor: pointer;
 }
-.logo {
+.logo_nav {
 
     position: absolute;
     width: 50px;
     height: 41px;
-    left: 100px;
-    top: 35px;
+    left: -120%;
     cursor: pointer;
 
+}
+.text_logo_nav {
+    position: absolute;
+    left: -112%;
+    top: 10px;
+
+    font-weight: 900;
+    font-family: 'Playfair Display';
 }
